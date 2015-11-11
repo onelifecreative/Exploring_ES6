@@ -1,0 +1,28 @@
+html { font-size: 62.5%; }
+body {
+    height:100%;
+    background-color:#f5f5f5;
+    font-size: 13px;
+    font-size: 1.3rem;
+    letter-spacing: 0.2px;
+}
+* {
+    -webkit-box-sizing: border-box; /* iOS <= 4 i Android <= 2.3 */
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing: border-box; /* Chrome, Opera, Safari 5+ i IE 8+ */
+}
+
+a {cursor:pointer;text-decoration: none;}
+
+.float-fixed:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+@charset "utf-8";
+
+@import "base/font";
+@import "base/mixin";
+@import "base/default_app_body";
+@import "base/table";
