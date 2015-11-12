@@ -265,6 +265,10 @@ section.main-container {
   margin: 0 auto;
 }
 
+.main-content h2 {
+  color: #A8A8A8;
+}
+
 section.main-container > header {
   height: 190px;
 }
