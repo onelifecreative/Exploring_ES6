@@ -36,7 +36,26 @@ body {
   color: #233249;
 }
 
-/* App FONT */
+.commpany-logo {
+  height: 10px;
+  width: 85px;
+}
+
+.commpany-logo h1 {
+  text-indent: -9999px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 85px;
+}
+
+a > img:hover, a, button {
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+}
+
 h2 {
   font-size: 18px;
   font-size: 1.8rem;
@@ -53,32 +72,67 @@ h3 {
 p {
   font-size: 13px;
   font-size: 1.3rem;
-  line-height: 18px;
-  padding-bottom: 15px;
-  color: #8491A3;
+  color: #fff;
+  letter-spacing: 0.5px;
 }
 
-.panel header h3 {
+.panel header h2 {
   margin-bottom: 10px;
+}
+
+.panel-header h2 {
+  display: inline-block;
+  font-size: 24px;
+  margin-left: 25px;
+}
+
+.main-content button, .copyright {
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.commpany-logo h1, .social a {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 body {
   font-family: 'ChronicleDisplay-SemiItalic' !important;
 }
 
+body section {
+  z-index: 100;
+}
+
 #main-page.main-style {
+  width: 100%;
+  padding-top: 1px;
+}
+
+.paralax {
+  position: fixed;
   background: url(../img/bg.jpg) center center/cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
-  width: 100%;
-  padding-top: 1px;
   z-index: 50;
+  width: 100%;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
 }
 
 .main-container {
-  padding-top: 60px;
   max-width: 80%;
   margin: 0 auto;
 }
@@ -125,10 +179,6 @@ body {
 .main-content button {
   position: absolute;
   bottom: 100px;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 /* BUTTON */
@@ -152,11 +202,112 @@ body {
   border-radius: 30px;
 }
 
+.btn-shadow {
+  -webkit-box-shadow: 0 3px 0px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 transparent;
+  box-shadow: 0 3px 0px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 transparent;
+}
+
 .copyright {
   position: absolute;
-  bottom: 50px;
-  width: 340px;
+  bottom: 20px;
+  width: 380px;
   margin: 0 auto;
+  left: 50%;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 8px;
+  /*  vertical-center element */
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.social a:hover {
+  opacity: 1;
+}
+
+.copyright .social, .copyright p, .commpany-logo {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* Navigation Style */
+.main-menu li {
+  padding-right: 5px;
+}
+
+button {
+  position: relative;
+}
+
+nav.style:after {
+  content: '';
+  background-image: url(../img/burger-ico.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 26px;
+  height: 23px;
+}
+
+/* main-container */
+.body-code {
+  height: 1100px;
+  background-color: #f5f5f5;
+}
+
+section.main-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+section.main-container > header {
+  height: 190px;
+}
+section.main-container > header .conteiner {
+  padding: 80px 0;
+}
+section.main-container > header .conteiner button {
+  float: right;
+}
+section.main-container > header .compatibility {
+  display: inline-block;
+}
+section.main-container > header .compatibility p {
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.compatibility p, .compatibility a {
+  font-size: 1.8rem;
+  font-size: 18px;
+}
+
+/* code */
+.panel-body .code {
+  background-color: #fefdf1;
+  min-height: 180px;
+}
+.panel-body pre {
+  padding: 30px;
+  display: block;
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.panel-body .comment {
+  color: #AEAEAE;
+}
+
+.code-type {
+  font-size: 18px;
+  float: right;
+  margin-bottom: 5px;
 }
 
 table {

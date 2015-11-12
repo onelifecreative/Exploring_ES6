@@ -1,50 +1,91 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <title>Your NEW Page Title!!</title>
+    <title>Exploring ECMAScript 6!!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="Description of this page">
+    <meta name="description" content="Exploring ECMAScript 6 || Training onelife.co Lukasz Schab">
     <link rel="stylesheet" href="css/_reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font/styles.css">
-    <section id="main-page" class="main-style">
-      <div id="center" class="main-content"><img src="img/letters.png">
-        <button class="btn">Start Using Today!</button>
-      </div>
-      <div class="copyright">
-        <figure class="social"><a>GitHub</a><a>Twitter</a></figure>
-        <p>Created by Lukasz Schab  |</p>
-        <figure class="commpany-logo">
-          <h1>onelife.co</h1>
-        </figure>
-      </div>
-    </section>
-    <section class="main-container">
-      <header>
-        <div class="conteiner">
-          <div class="compatibility">
-            <p>Browse compatibility table </p><span> <a>http://kangax.github.io/compat-table/es6/</a></span>
+    <header class="paralax"></header>
+    <main>
+      <section id="main-page" class="main-style">
+        <div id="center" class="main-content"><img src="img/letters.png" width="1000">
+          <button class="btn">Start Using Today!</button>
+        </div>
+        <div class="copyright">
+          <p>Created by Lukasz Schab  |</p>
+          <figure class="commpany-logo">
+            <h1>onelife.co</h1>
+          </figure>
+          <figure class="social"><a href="https://github.com/onelifecreative"> <img src="img/github.png" alt="github" width="18" height="18"></a><a href="https://twitter.com/onelifecreative"><img src="img/twitter.png" alt="twitter" width="18" height="18"></a></figure>
+        </div>
+      </section>
+      <div class="body-code">
+        <section class="main-container">
+          <header>
+            <div class="conteiner">
+              <div class="compatibility">
+                <p>Browse compatibility table </p><span> <a href="http://kangax.github.io/compat-table/es6/">http://kangax.github.io/compat-table/es6/</a></span>
+              </div>
+              <button class="btn btn-shadow main-menu">
+                <nav class="style">
+                  <div id="hamburger"></div>
+                  <ul>
+                    <li>Const & Let</li>
+                  </ul>
+                </nav>
+              </button>
+            </div>
+          </header>
+          <div class="panel-container">
+            <header class="panel-header">
+              <h2>Const & Let</h2><span class="code-type">ES6</span>
+            </header>
+            <div class="panel panel-body">
+              <section class="code">
+                <pre class="lang-es6">var a = 0; <span class="comment">// standart varable</span>
+function f() {
+ {
+   let x;
+   {
+     <span class="comment">// okay, block scoped name</span>
+     const x = "sneaky";
+     <span class="comment">// error, const</span>
+     x = "foo";
+   }
+   <span class="comment">// error, already declared in block</span>
+   let x = "inner";
+  }
+}</pre>
+              </section>
+            </div>
           </div>
-          <nav class="style">
-            <div id="hamburger"></div>
-            <ul>
-              <li>Scope & Variable</li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <div class="module-container">
-        <header class="module-header">
-          <h2>Scope & Variable</h2><span>ES6</span>
-        </header>
-        <div class="module-body panel">
-          <section class="code"><code class="lang-es6">
-              | class Point {
-              | fsdfsdfsdfdfs</code></section>
-        </div>
+          <div class="panel-container">
+            <header class="panel-header float-fixed"><span class="code-type">ES5</span></header>
+            <div class="panel panel-body">
+              <section class="code">
+                <pre class="lang-es6">var a = 0; <span class="comment">// standart varable</span>
+function f() {
+ {
+   let x;
+   {
+     <span class="comment">// okay, block scoped name</span>
+     const x = "sneaky";
+     <span class="comment">// error, const</span>
+     x = "foo";
+   }
+   <span class="comment">// error, already declared in block</span>
+   let x = "inner";
+  }
+}</pre>
+              </section>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </main>
   </head>
+  <script src="js/script.js"></script>
 </html>
-<script src="js/script.js"></script>

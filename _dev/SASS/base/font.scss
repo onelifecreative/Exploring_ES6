@@ -4,9 +4,23 @@ body {
 	font-family:"Proxima Nova", Helvetica, Arial, sans-serif;
 	color:#233249;
 }
-
-/* App FONT */
-
+.commpany-logo {
+	height:10px;
+	width:85px;
+}
+.commpany-logo h1 {
+	text-indent: -9999px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: 85px;
+    @extend %simple-transition;
+}
+a > img:hover,a,button {
+	cursor:pointer;
+}
+a {
+	color:#000;
+}
 h2 {
 	font-size: 18px;
 	font-size: 1.8rem;
@@ -22,8 +36,11 @@ h3 {
 p {
 	font-size: 13px;
 	font-size: 1.3rem;
-	line-height: 18px;
-	padding-bottom: 15px;
-	color:#8491A3;
+	color:#fff;
+	letter-spacing:0.5px;
 }
-.panel header h3 {margin-bottom:10px;}
+.panel header h2 { margin-bottom:10px; }
+.panel-header h2 {
+	display:inline-block;
+	font-size:24px;
+	margin-left:25px;}

@@ -1,9 +1,41 @@
-.module-container
-	header.module-header
-		h2 Scope & Variable
-		span ES6
-	.module-body.panel
+.panel-container
+	header.panel-header
+		h2 Const & Let
+		span.code-type ES6
+	.panel.panel-body
 		section.code
-			code.lang-es6
-				|| class Point {
-				|| fsdfsdfsdfdfs
+			pre.lang-es6
+				| var a = 0; <span class="comment">// standart varable</span>
+				| function f() {
+				|  {
+				|    let x;
+				|    {
+				|      <span class="comment">// okay, block scoped name</span>
+				|      const x = "sneaky";
+				|      <span class="comment">// error, const</span>
+				|      x = "foo";
+				|    }
+				|    <span class="comment">// error, already declared in block</span>
+				|    let x = "inner";
+				|   }
+				| }
+.panel-container
+	header.panel-header.float-fixed
+		span.code-type ES5
+	.panel.panel-body
+		section.code
+			pre.lang-es6
+				| var a = 0; <span class="comment">// standart varable</span>
+				| function f() {
+				|  {
+				|    let x;
+				|    {
+				|      <span class="comment">// okay, block scoped name</span>
+				|      const x = "sneaky";
+				|      <span class="comment">// error, const</span>
+				|      x = "foo";
+				|    }
+				|    <span class="comment">// error, already declared in block</span>
+				|    let x = "inner";
+				|   }
+				| }

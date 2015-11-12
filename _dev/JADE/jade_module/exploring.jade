@@ -1,23 +1,29 @@
-section#main-page.main-style
-	div#center.main-content
-		img(src="img/letters.png")
-		button.btn Start Using Today!
-	div.copyright
-		figure.social
-			a GitHub
-			a Twitter
-		p Created by Lukasz Schab  |
-		figure.commpany-logo
-			h1 onelife.co
-section.main-container
-	header
-		.conteiner
-			div.compatibility
-				p Browse compatibility table 
-				span 
-					a http://kangax.github.io/compat-table/es6/
-			nav.style
-				div#hamburger
-				ul
-					li Scope & Variable
-	include scope.jade
+header.paralax
+main
+	section#main-page.main-style
+		div#center.main-content
+			img(src="img/letters.png" width="1000")
+			button.btn Start Using Today!
+		div.copyright
+			p Created by Lukasz Schab  |
+			figure.commpany-logo
+				h1 onelife.co
+			figure.social
+				a(href="https://github.com/onelifecreative") 
+					img(src="img/github.png", alt="github" width="18" height="18")
+				a(href="https://twitter.com/onelifecreative")
+					img(src="img/twitter.png", alt="twitter" width="18" height="18")
+	div.body-code
+		section.main-container
+			header
+				.conteiner
+					div.compatibility
+						p Browse compatibility table 
+						span 
+							a(href="http://kangax.github.io/compat-table/es6/") http://kangax.github.io/compat-table/es6/
+					button.btn.btn-shadow.main-menu
+						nav.style
+							div#hamburger
+							ul
+								li Const & Let
+			include scope.jade

@@ -1,18 +1,22 @@
-(function(w){
+(function(w) {
 	
-	var container = document.getElementById('main-page');
-		container.setAttribute("style", "height:" + w.innerHeight + "px");
+	var container,paralax,letter,resize;
 
-	var letter = document.getElementById('center');
-	letter.setAttribute("style", "margin-top:" + ((w.innerHeight/2) - 200) + "px");
-
-	var a = window.addEventListener("resize",function(){
+		container = document.getElementById('main-page');
+		paralax = document.querySelector('.paralax');
 		letter = document.getElementById('center');
-		
+
+		container.style.height = w.innerHeight + "px";
+		paralax.style.height = w.innerHeight + "px";
+		letter.style.marginTop = ((w.innerHeight/2) - 200) + "px";
+
+	resize = window.addEventListener("resize",function(){
+
 		var height = w.innerHeight;
 		
-		container.setAttribute("style", "height:" + height + "px");
-		letter.setAttribute("style", "margin-top:" + ((height/2) - 200) + "px");
+		container.style.height = height + "px";
+		paralax.style.height = height + "px";
+		letter.style.marginTop = (( height/2 ) - 200) + "px";
 
 	},false);
 
