@@ -46,41 +46,69 @@
             </header>
             <div class="panel panel-body">
               <section class="code">
-                <pre class="lang-es6">var a = 0; <span class="comment">// standart varable</span>
-function f() {
- {
-   let x;
-   {
-     <span class="comment">// okay, block scoped name</span>
-     const x = "sneaky";
-     <span class="comment">// error, const</span>
-     x = "foo";
-   }
-   <span class="comment">// error, already declared in block</span>
-   let x = "inner";
-  }
-}</pre>
-              </section>
-            </div>
-          </div>
-          <div class="panel-container">
-            <header class="panel-header float-fixed"><span class="code-type">ES5</span></header>
-            <div class="panel panel-body">
-              <section class="code">
-                <pre class="lang-es6">var a = 0; <span class="comment">// standart varable</span>
-function f() {
- {
-   let x;
-   {
-     <span class="comment">// okay, block scoped name</span>
-     const x = "sneaky";
-     <span class="comment">// error, const</span>
-     x = "foo";
-   }
-   <span class="comment">// error, already declared in block</span>
-   let x = "inner";
-  }
-}</pre>
+                <pre class="lang-es6">// what is let ? this is variable scoping
+<br>
+var x = 5;   // x = 5;
+let y = 9;   // y = 9;
+<br>
+// &
+<br>
+var x = 5;
+let x = 5  // ?
+<br>
+// TypeError: redeclaration of non-configurable global property x
+<br>
+<br>
+<br>
+/* add simple block scope */
+{
+	var x = 5;	// x = ? | 5
+	let y = 8;  // y = ? | 8
+}
+console.log(x,y);
+<br>
+// x = ? | 5
+// y = ? | ReferenceError: foo is not defined
+<br>
+<br>
+/* function scope */
+<br>
+function exist() {
+<br>
+	var foo = 'Tom ';
+	let boo = 'Alice ';
+<br>
+	function name() {
+		let boo = 'Ammy ';
+		console.log(foo + boo); // Tom Ammy
+	}
+<br>
+	console.log(foo + boo); // Tom Alice
+	name();
+}
+<br>
+/* iterate */
+<br>
+<br>
+for (let i = 0; i<4; i++) {
+ console.log(i); // 0, 1, 2, 3, 4
+}
+console.log(i); // i is not defined
+<br>
+//.vs
+<br>
+let i = "Danny";
+function iterate(){
+	for (let i = 0; i<4; i++) {
+	  console.log(i); // 0, 1, 2, 3, 4
+	}
+}
+iterate();
+console.log(i); // i is not defined
+<br>
+<br>
+<br>
+// what is let ? this is variable scoping</pre>
               </section>
             </div>
           </div>
