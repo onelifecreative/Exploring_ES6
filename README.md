@@ -5,7 +5,8 @@
 - const
 - import-export
 
-
+<br>
+---------------------------------------------------------------------
 * footnotes & links & special Thanks
 - <a href="http://exploringjs.com/es6/index.html#toc_ch_first-steps">exploringjs Book || dr.Axel Rauschmayer</a>
 - <a href="https://egghead.io/technologies/es6">egghead.io</a>
