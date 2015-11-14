@@ -7,7 +7,7 @@
 
 <br>
 ---------------------------------------------------------------------
-* footnotes & links & special Thanks
+** footnotes & links & special Thanks
 - <a href="http://exploringjs.com/es6/index.html#toc_ch_first-steps">exploringjs Book || dr.Axel Rauschmayer</a>
 - <a href="https://egghead.io/technologies/es6">egghead.io</a>
 - <a href="http://es6-features.org/">es6-features</a>
