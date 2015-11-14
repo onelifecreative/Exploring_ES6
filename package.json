@@ -4,8 +4,10 @@
   "description": "HTML5 KickStart",
   "main": "gruntfile.js",
   "devDependencies": {
+    "babel-preset-es2015": "^6.1.2",
     "grunt": "^0.4.5",
     "grunt-autowatch": "^0.1.4",
+    "grunt-babel": "^6.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-jade": "^0.15",
@@ -17,13 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://repo4.mydevil.net/git/priv/dipson/CMS/"
+    "url": "https://github.com/onelifecreative/Exploring_ES6"
   },
   "author": "onelife.co Independent WebDeveloper Collective",
   "license": "ISC",
   "dependencies": {
-    "dist": "^0.1.2",
-    "dragula": "^3.0.3",
-    "mustache": "^2.2.0"
+    "dist": "^0.1.2"
   }
 }

@@ -18,11 +18,28 @@ module.exports = function(grunt) {
           files: ['_dev/SASS/*.scss','_dev/SASS/base/*.scss'],
           tasks: "dev"
         },
+
+        babel:{
+          files: ['_dev/JAVASCRIPT/es6_script.js'],
+          tasks: "dev"
+        },
         
         copy: {
           files: ['_dev/JAVASCRIPT/*.js'],
           tasks: "dev"
         },
+    },
+
+    babel: {
+        options: {
+            sourceMap: true,
+            presets: ['babel-preset-es2015']
+        },
+        dist: {
+            files: {
+                '_dev/JAVASCRIPT/script.js':'_dev/JAVASCRIPT/es6_script.js'
+            }
+        }
     },
 
     copy: {

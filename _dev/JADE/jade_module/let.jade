@@ -1,0 +1,70 @@
+.panel-container
+	header.panel-header
+		h2 Let
+		//- span.code-type 
+	.panel.panel-body
+		section.code
+			pre.lang-es6
+				span.comment what is let ? this is variable scoping
+				|<br>
+				|var x = 5;   <span class="comment">// x = 5;</span>
+				|let y = 9;   <span class="comment">// y = 9;</span>
+				|<br>
+				span.comment // &
+				|<br>
+				|var x = 5;
+				|let x = 5;  <span class="comment">// ?</span>
+				|<br>
+				span.comment // TypeError: redeclaration of non-configurable global property x
+				|<br>
+				|<br>
+				|<br>
+				span.comment /* add simple block scope */
+				<br>
+				|{
+				|  var x = 5;	<span class="comment">// x = ? | 5</span>
+				|  let y = 8;  <span class="comment">// y = ? | 8</span>
+				|}
+				|console.log(x,y);
+				|<br>
+				span.comment // x = ? | 5
+				span.comment // y = ? | ReferenceError: foo is not defined
+				|<br>
+				|<br>
+				span.comment /* function scope */
+				|<br>
+				|function exist() {
+				|<br>
+				|	var foo = 'Tom ';
+				|	let boo = 'Alice ';
+				|<br>
+				|	function name() {
+				|		let boo = 'Ammy ';
+				|		console.log(foo + boo); <span class="comment">// Tom Ammy</span>
+				|	}
+				|<br>
+				|	console.log(foo + boo); <span class="comment">// Tom Alice</span>
+				|	name();
+				|}
+				|<br>
+				span.comment /* iterate */
+				|<br>
+				|<br>
+				|for (let i = 0; i<4; i++) {
+				|  console.log(i); // 0, 1, 2, 3, 4
+				|}
+				|console.log(i); <span class="comment">// i is not defined</span>
+				|<br>
+				span.comment //.vs
+				|<br>
+				|let i = "Danny";
+				|function iterate(){
+				|	for (let i = 0; i<4; i++) {
+				|	  console.log(i); <span class="comment">// 0, 1, 2, 3, 4</span>
+				|	}
+				|}
+				|iterate();
+				|console.log(i); <span class="comment">// i is not defined</span>
+				|<br>
+				|<br>
+				|<br>

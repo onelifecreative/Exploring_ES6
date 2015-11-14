@@ -34,7 +34,7 @@
                 <nav class="style">
                   <div id="hamburger"></div>
                   <ul>
-                    <li>Const & Let</li>
+                    <li>Let</li>
                   </ul>
                 </nav>
               </button>
@@ -42,37 +42,26 @@
           </header>
           <div class="panel-container">
             <header class="panel-header">
-              <h2>Const & Let</h2><span class="code-type">ES6</span>
+              <h2>Let</h2>
             </header>
             <div class="panel panel-body">
               <section class="code">
-                <pre class="lang-es6">// what is let ? this is variable scoping
-<br>
-var x = 5;   // x = 5;
-let y = 9;   // y = 9;
-<br>
-// &
-<br>
+                <pre class="lang-es6"><span class="comment">what is let ? this is variable scoping</span><br>
+var x = 5;   <span class="comment">// x = 5;</span>
+let y = 9;   <span class="comment">// y = 9;</span>
+<br><span class="comment">// &</span><br>
 var x = 5;
-let x = 5  // ?
+let x = 5;  <span class="comment">// ?</span>
+<br><span class="comment">// TypeError: redeclaration of non-configurable global property x</span><br>
 <br>
-// TypeError: redeclaration of non-configurable global property x
-<br>
-<br>
-<br>
-/* add simple block scope */
+<br><span class="comment">/* add simple block scope */</span><br>
 {
-	var x = 5;	// x = ? | 5
-	let y = 8;  // y = ? | 8
+ var x = 5;	<span class="comment">// x = ? | 5</span>
+ let y = 8;  <span class="comment">// y = ? | 8</span>
 }
 console.log(x,y);
-<br>
-// x = ? | 5
-// y = ? | ReferenceError: foo is not defined
-<br>
-<br>
-/* function scope */
-<br>
+<br><span class="comment">// x = ? | 5</span><span class="comment">// y = ? | ReferenceError: foo is not defined</span><br>
+<br><span class="comment">/* function scope */</span><br>
 function exist() {
 <br>
 	var foo = 'Tom ';
@@ -80,35 +69,81 @@ function exist() {
 <br>
 	function name() {
 		let boo = 'Ammy ';
-		console.log(foo + boo); // Tom Ammy
+		console.log(foo + boo); <span class="comment">// Tom Ammy</span>
 	}
 <br>
-	console.log(foo + boo); // Tom Alice
+	console.log(foo + boo); <span class="comment">// Tom Alice</span>
 	name();
 }
-<br>
-/* iterate */
-<br>
+<br><span class="comment">/* iterate */</span><br>
 <br>
 for (let i = 0; i<4; i++) {
  console.log(i); // 0, 1, 2, 3, 4
 }
-console.log(i); // i is not defined
-<br>
-//.vs
-<br>
+console.log(i); <span class="comment">// i is not defined</span>
+<br><span class="comment">//.vs</span><br>
 let i = "Danny";
 function iterate(){
 	for (let i = 0; i<4; i++) {
-	  console.log(i); // 0, 1, 2, 3, 4
+	  console.log(i); <span class="comment">// 0, 1, 2, 3, 4</span>
 	}
 }
 iterate();
-console.log(i); // i is not defined
+console.log(i); <span class="comment">// i is not defined</span>
 <br>
 <br>
+<br></pre>
+              </section>
+            </div>
+          </div>
+          <div class="panel-container">
+            <header class="panel-header">
+              <h2>Const || Constant</h2>
+            </header>
+            <div class="panel panel-body">
+              <section class="code">
+                <pre class="lang-es6"><span class="comment">// variables cannot be re-assigned. Value is read-only</span><br><span class="comment">// Const is not variable is a references</span><br>
+const foo = 'Lukasz'; <span class="comment">foo = 'Jenny'</span><span class="comment">// TypeError: invalid assignment to const `name'</span><br>
+const foo = 'Jenny'; <span class="comment">// TypeError: redeclaration of const name</span><br>
+<br><span class="comment">/* !IMPORTANT "const" inherit block scope */</span><br>
+{
+	const foo = 'Lukasz';
+	console.log(foo); <span class="comment">     // 'Lukasz'</span>
+}
+console.log(foo); <span class="comment">// ReferenceError: foo is not defined</span>
 <br>
-// what is let ? this is variable scoping</pre>
+const obj = {};
+obj.file = '/files/img.jpg';
+<br>
+console.log(obj);
+<br>
+obj = 'this is file module'; <span class="comment">// TypeError: invalid assignment to const `obj'</span></pre>
+              </section>
+            </div>
+          </div>
+          <div class="panel-container">
+            <header class="panel-header">
+              <h2>Import/Export</h2>
+            </header>
+            <div class="panel panel-body">
+              <section class="code">
+                <pre class="lang-es6"><span class="comment">// Es6 engine not support natively export/import</span><span class="comment">// U can use tools like webpack, jspm, browserify...</span><br>
+<br><span class="comment">// lib/jquery.js</span><br>
+import "module/jquery";
+<br><span class="line">-----------------------------------------------------</span><br><span class="comment">/* import object */</span><br><span class="comment">// module/files.js</span><br>
+export function files(files){ return file; }
+<br><span class="comment">// app.js</span><span class="comment">// import only files fn</span><br>
+import {files} from "module/files.js";
+<br><span class="line">-----------------------------------------------------</span><br><span class="comment">/* import only selected */</span><br><span class="comment">// module/files.js</span><br>
+export function files(files){ return file; }
+export function users(users){ return user; }
+<br><span class="comment">// app.js</span><span class="comment">// import only files fn</span><br>
+import {files,users} from "module/files.js";
+<br><span class="line">-----------------------------------------------------</span><br><span class="comment">/* import all exports fn */</span><br><span class="comment">// module/files.js</span><br>
+export function files(files){ return file; }
+export function users(users){ return user; }
+<br><span class="comment">// app.js</span><span class="comment">// import all the exported bindings</span><br>
+import * as files from "module/files.js";</pre>
               </section>
             </div>
           </div>

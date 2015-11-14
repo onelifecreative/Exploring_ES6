@@ -1,0 +1,55 @@
+.panel-container
+	header.panel-header
+		h2 Import/Export
+		//- span.code-type 
+	.panel.panel-body
+		section.code
+			pre.lang-es6
+				span.comment // Es6 engine not support natively export/import
+				span.comment // U can use tools like webpack, jspm, browserify...
+				<br>
+				<br>
+				span.comment // lib/jquery.js
+				<br>
+				| import "module/jquery";
+				<br>
+				span.line -----------------------------------------------------
+				<br>
+				span.comment /* import object */
+				<br>
+				span.comment // module/files.js
+				<br>
+				| export function files(files){ return file; }
+				<br>
+				span.comment // app.js
+				span.comment // import only files fn
+				<br>
+				| import {files} from "module/files.js";
+				<br>
+				span.line -----------------------------------------------------
+				<br>
+				span.comment /* import only selected */
+				<br>
+				span.comment // module/files.js
+				<br>
+				| export function files(files){ return file; }
+				| export function users(users){ return user; }
+				<br>
+				span.comment // app.js
+				span.comment // import only files fn
+				<br>
+				| import {files,users} from "module/files.js";
+				<br>
+				span.line -----------------------------------------------------
+				<br>
+				span.comment /* import all exports fn */
+				<br>
+				span.comment // module/files.js
+				<br>
+				| export function files(files){ return file; }
+				| export function users(users){ return user; }
+				<br>
+				span.comment // app.js
+				span.comment // import all the exported bindings
+				<br>
+				| import * as files from "module/files.js";

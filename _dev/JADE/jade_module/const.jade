@@ -1,0 +1,33 @@
+.panel-container
+	header.panel-header
+		h2 Const || Constant
+		//- span.code-type 
+	.panel.panel-body
+		section.code
+			pre.lang-es6
+				span.comment // variables cannot be re-assigned. Value is read-only
+				<br>
+				span.comment // Const is not variable is a references
+				<br>
+				| const foo = 'Lukasz'; 
+				span.comment foo = 'Jenny'
+				span.comment // TypeError: invalid assignment to const `name'
+				<br>
+				| const foo = 'Jenny'; 
+				span.comment // TypeError: redeclaration of const name
+				<br>
+				<br>
+				span.comment /* !IMPORTANT "const" inherit block scope */
+				<br>
+				| {
+				|	const foo = 'Lukasz';
+				|	console.log(foo); <span class="comment">     // 'Lukasz'</span>
+				| }
+				| console.log(foo); <span class="comment">// ReferenceError: foo is not defined</span>
+				<br>
+				| const obj = {};
+				| obj.file = '/files/img.jpg';
+				<br>
+				| console.log(obj);
+				<br>
+				| obj = 'this is file module'; <span class="comment">// TypeError: invalid assignment to const `obj'</span>

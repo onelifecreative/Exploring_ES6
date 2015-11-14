@@ -1,4 +1,5 @@
 // what is let ? this is variable scoping
+// what is let ? this is variable scoping
 
 var x = 5;   // x = 5;
 let y = 9;   // y = 9;
@@ -60,6 +61,14 @@ console.log(i); // i is not defined
 
 
 
-// what is let ? this is variable scoping
+// what is const
+
+
+
+
+
+
+
+
 
 

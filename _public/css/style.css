@@ -256,8 +256,8 @@ nav.style:after {
 
 /* main-container */
 .body-code {
-  height: 1100px;
   background-color: #f5f5f5;
+  padding-bottom: 50px;
 }
 
 section.main-container {
@@ -312,6 +312,13 @@ section.main-container > header .compatibility p {
   font-size: 18px;
   float: right;
   margin-bottom: 5px;
+}
+
+span.line {
+  color: #E7E5D6;
+  margin: 5px 0;
+  display: block;
+  font-size: 10px;
 }
 
 table {
