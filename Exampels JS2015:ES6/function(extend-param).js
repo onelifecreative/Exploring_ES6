@@ -1,5 +1,5 @@
 /**
- * [define function parametr old way ES5/ new way ES6]
+ * [define function parametrs || ES5 / ES6]
  * ES6
  */
 
