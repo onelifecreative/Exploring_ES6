@@ -1,6 +1,6 @@
 <figure><a href="http://www.onelife.co/es6/"><img src="http://www.onelife.co/es6/img/cover.jpg" alt="es6"></a></figure>
 
-# first steps with ECMAScript 6 & web & expirience
+# first steps with ECMAScript 6 & web & experience
 - let
 - const
 - import-export
